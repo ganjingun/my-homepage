@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<title>艺术人格测试 | 测测你最像哪个西方艺术家</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #eef0e5;
+    background-image:
+        radial-gradient(circle at 25% 40%, rgba(200, 185, 160, 0.08) 2%, transparent 2.5%),
+        radial-gradient(circle at 70% 85%, rgba(150, 130, 100, 0.06) 1.5%, transparent 2%),
+        repeating-linear-gradient(45deg, rgba(180, 160, 130, 0.02) 0px, rgba(180, 160, 130, 0.02) 2px, transparent 2px, transparent 8px);
+    background-size: 40px 40px, 60px 60px, auto;
+    font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.test-container {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(252, 250, 245, 0.92);
+    border-radius: 2rem;
+    box-shadow: 0 20px 35px -12px rgba(60, 45, 30, 0.2), 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border: 1px solid rgba(210, 190, 165, 0.4);
+}
+.hero {
+    padding: 2rem 2rem 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid #e2d9ce;
+}
+.hero h1 {
+    font-size: 1.9rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #5f5542;
+}
+.hero p {
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+    color: #8f846f;
+    font-style: italic;
+}
+.progress-area {
+    padding: 1rem 2rem 0.2rem;
+}
+.progress-bar-bg {
+    background: #e6dfd3;
+    border-radius: 20px;
+    height: 2px;
+    width: 100%;
+}
+.progress-fill {
+    background: #b5a07e;
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.25s ease;
+}
+.question-counter {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #9c8f78;
+    margin-top: 0.5rem;
+}
+.quiz-card {
+    padding: 1.8rem 2rem 2rem;
+}
+.question-text {
+    font-size: 1.55rem;
+    color: #4a4032;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    border-left: 2px solid #cfc2ae;
+    padding-left: 1rem;
+}
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+.option-btn {
+    background: #fdfaf5;
+    border: 1px solid #e3d8ca;
+    border-radius: 40px;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
+    text-align: left;
+    color: #5c5343;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.option-btn:hover {
+    background: #f7f1e8;
+    border-color: #c8b79c;
+}
+.option-prefix {
+    background: #ede6db;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    color: #8b765a;
+    font-size: 0.8rem;
+}
+.action-buttons {
+    display: flex;
+    justify-content: center;
+}
+.reset-btn {
+    background: transparent;
+    border: 1px solid #d6ccbc;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    color: #9b8a6e;
+    cursor: pointer;
+}
+.result-card {
+    padding: 2rem 2rem;
+    text-align: center;
+}
+.artist-name {
+    font-size: 2.2rem;
+    color: #776b54;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+}
+.artist-tagline {
+    font-size: 1rem;
+    color: #ab9a7e;
+    border-bottom: 1px dotted #ddd0be;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+}
+.artist-desc {
+    background: rgba(250, 245, 235, 0.7);
+    padding: 1.2rem 1.5rem;
+    border-radius: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #4f473a;
+    text-align: left;
+    margin: 1rem 0 1.8rem;
+    border: 1px solid #e8dfd1;
+}
+.share-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.restart-test {
+    background: #dcd0bf;
+    border: none;
+    color: #5f5542;
+    padding: 0.7rem 1.6rem;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.copy-tip {
+    background: #f0e9df;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    color: #8e7c60;
+    cursor: pointer;
+}
+footer {
+    font-size: 0.65rem;
+    text-align: center;
+    padding: 1rem;
+    color: #b9ab93;
+    border-top: 1px solid #ece3d7;
+}
+</style>
+</head>
+<body>
+<div class="test-container">
+    <div class="hero">
+        <h1>艺术人格透视</h1>
+        <p>测测你最像哪位西方艺术家 · 二十五问</p>
+    </div>
+    <div class="progress-area">
+        <div class="progress-bar-bg">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="question-counter">
+            <span id="currentQNumber">第一题</span>
+            <span id="totalQ">/ 25</span>
+        </div>
+    </div>
+    <div id="dynamicContent"></div>
+    <footer>基于艺术心理学趣味测试 · 答案仅映照你灵魂的一角</footer>
+</div>
+
+<script>
+const ARTISTS = {
+    "达·芬奇": { name: "达·芬奇", tagline: "理性的观察者", desc: "你和达·芬奇拥有相似的艺术气质，喜欢思考分析，对物质生活要求不高，热爱精神生活。你是一个优秀的多面手，热爱科学与创新，兴趣广泛、多才多艺。永远保持好奇心，探索世界的本质。" },
+    "毕加索": { name: "毕加索", tagline: "热情的享乐主义者", desc: "你和毕加索有着相似的艺术气质，乐观、追赶潮流，想过愉快的生活，想创新、自娱娱人。有天赋、有韧性，在奋斗的同时一直保有一颗童真的心。敢于打破规则，活出精彩人生。" },
+    "梵高": { name: "梵高", tagline: "深情的悲情浪漫者", desc: "你和梵高有着相似的艺术气质，情绪化、追求浪漫，是个热爱生活、淡泊名利、敢于为自己的信仰奉献一切的人。你想创造独一无二的作品，不停自我探索。真挚而热烈，用情感点亮世界。" },
+    "米开朗基罗": { name: "米开朗基罗", tagline: "坚毅的保护者", desc: "你和米开朗基罗有着相似的艺术气质，是一个忧国忧民、追求权力、讲求实力的人。有正义感，喜欢做大事，是绝对的行动派，渴望用力量唤醒社会。坚韧不拔，为理想付出一切。" },
+    "莫奈": { name: "莫奈", tagline: "温柔的调停者", desc: "你和莫奈有着相似的艺术气质，追求和平，善解人意，随和，热爱自然，喜欢纯朴的美。你善于发现细微之处的灵性之美，眼中一片和谐与美好。用温柔和耐心感知世界的光影变幻。" },
+    "达利": { name: "达利", tagline: "疯狂的创造者", desc: "你和达利有着相似的艺术气质，天马行空、打破常规。你不满足于平凡，喜欢用最独特的方式表达自己。你的想象力就是你最大的武器。梦境与现实交错，创造只属于你的奇幻宇宙。" }
+};
+
+const questionsData = [
+    { text: "你空闲时更喜欢做什么？", options: [
+        { text: "看书或钻研新知识，沉迷理论世界", artist: "达·芬奇" },
+        { text: "和朋友聚会，享受热闹社交", artist: "毕加索" },
+        { text: "独自画画、听音乐或写诗", artist: "梵高" },
+        { text: "去公园散步、看云赏花", artist: "莫奈" }
+    ]},
+    { text: "别人最可能用哪个词形容你？", options: [
+        { text: "坚韧可靠，说到做到", artist: "米开朗基罗" },
+        { text: "古怪又充满创意，不按常理出牌", artist: "达利" },
+        { text: "理性沉稳，善于分析", artist: "达·芬奇" },
+        { text: "热情有活力，人群中的小太阳", artist: "毕加索" }
+    ]},
+    { text: "你处理问题时更倾向于？", options: [
+        { text: "跟随直觉与内心灵感", artist: "梵高" },
+        { text: "先观察全局再顺其自然", artist: "莫奈" },
+        { text: "坚定计划，一步一个脚印", artist: "米开朗基罗" },
+        { text: "打破常规，寻找独特解法", artist: "达利" }
+    ]},
+    { text: "什么样的环境让你最舒服？", options: [
+        { text: "安静书房，有笔记本和模型", artist: "达·芬奇" },
+        { text: "音乐节或美术馆派对", artist: "毕加索" },
+        { text: "充满烛光与色彩的个人画室", artist: "梵高" },
+        { text: "庄重有力量的历史遗迹", artist: "米开朗基罗" }
+    ]},
+    { text: "你更欣赏哪种人？", options: [
+        { text: "温柔和善，与自然共生的人", artist: "莫奈" },
+        { text: "特立独行，不畏惧他人眼光", artist: "达利" },
+        { text: "知识渊博，有学者风范", artist: "达·芬奇" },
+        { text: "幽默风趣，把快乐带给别人", artist: "毕加索" }
+    ]},
+    { text: "当你遇到困难时通常会？", options: [
+        { text: "沉浸情绪，需要独处创作来排解", artist: "梵高" },
+        { text: "硬扛到底，用意志力突破", artist: "米开朗基罗" },
+        { text: "用怪诞的想象化解焦虑", artist: "达利" },
+        { text: "去大自然中放松，静心思考", artist: "莫奈" }
+    ]},
+    { text: "你对“规则”的态度是？", options: [
+        { text: "尊重但会理性质疑", artist: "达·芬奇" },
+        { text: "经常挑战甚至打破它", artist: "毕加索" },
+        { text: "跟随内心，不在乎规则", artist: "梵高" },
+        { text: "疯狂解构，创造自己的法则", artist: "达利" }
+    ]},
+    { text: "什么最能打动你？", options: [
+        { text: "坚韧不拔的正义之举", artist: "米开朗基罗" },
+        { text: "转瞬即逝的光影与宁静", artist: "莫奈" },
+        { text: "跨学科的智慧创新", artist: "达·芬奇" },
+        { text: "充满生命张力的创作激情", artist: "毕加索" }
+    ]},
+    { text: "你更擅长哪类事情？", options: [
+        { text: "深度感受与艺术表达", artist: "梵高" },
+        { text: "超现实主义设计或荒诞创意", artist: "达利" },
+        { text: "坚持到底，完成宏伟项目", artist: "米开朗基罗" },
+        { text: "用温柔的方式影响他人", artist: "莫奈" }
+    ]},
+    { text: "你希望人们如何记住你？", options: [
+        { text: "一个无所不能的跨界天才", artist: "达·芬奇" },
+        { text: "有趣又充满魅力的灵魂", artist: "毕加索" },
+        { text: "真挚而深刻，为艺术燃烧", artist: "梵高" },
+        { text: "拥有非凡想象力的梦想家", artist: "达利" }
+    ]},
+    { text: "周末的上午，你通常？", options: [
+        { text: "列计划学习新技能", artist: "达·芬奇" },
+        { text: "约朋友去逛创意市集", artist: "毕加索" },
+        { text: "睡到自然醒然后即兴创作", artist: "梵高" },
+        { text: "去郊外写生或徒步", artist: "莫奈" }
+    ]},
+    { text: "你觉得自己最大的优点是？", options: [
+        { text: "坚持和责任感", artist: "米开朗基罗" },
+        { text: "乐观和感染力", artist: "毕加索" },
+        { text: "想象力和原创性", artist: "达利" },
+        { text: "洞察力与逻辑", artist: "达·芬奇" }
+    ]},
+    { text: "你更容易被哪种艺术形式吸引？", options: [
+        { text: "宏伟的雕塑或建筑", artist: "米开朗基罗" },
+        { text: "超现实、梦境般的绘画", artist: "达利" },
+        { text: "印象派的光影风景", artist: "莫奈" },
+        { text: "手稿、科学图解与发明", artist: "达·芬奇" }
+    ]},
+    { text: "在团队中你通常扮演什么角色？", options: [
+        { text: "目标驱动者，推动进度", artist: "米开朗基罗" },
+        { text: "创意发想者，点子王", artist: "毕加索" },
+        { text: "调和者，维持和谐氛围", artist: "莫奈" },
+        { text: "幕后分析者，提供策略", artist: "达·芬奇" }
+    ]},
+    { text: "你更喜欢哪种旅行方式？", options: [
+        { text: "参观博物馆、古迹", artist: "达·芬奇" },
+        { text: "参加当地节日和派对", artist: "毕加索" },
+        { text: "独自去偏远小镇寻找灵感", artist: "梵高" },
+        { text: "躺在沙滩上看云发呆", artist: "莫奈" }
+    ]},
+    { text: "对于金钱和物质，你的态度是？", options: [
+        { text: "足够支持理想即可", artist: "梵高" },
+        { text: "追求奢华与独特体验", artist: "达利" },
+        { text: "理性规划，投资未来", artist: "达·芬奇" },
+        { text: "慷慨分享，享受生活", artist: "毕加索" }
+    ]},
+    { text: "你更害怕什么？", options: [
+        { text: "被世界遗忘或平庸", artist: "米开朗基罗" },
+        { text: "创造力枯竭", artist: "达利" },
+        { text: "情感被误解", artist: "梵高" },
+        { text: "混乱与冲突", artist: "莫奈" }
+    ]},
+    { text: "你平时如何做决定？", options: [
+        { text: "收集资料，理性分析", artist: "达·芬奇" },
+        { text: "凭直觉，甚至随机", artist: "达利" },
+        { text: "听从内心情感", artist: "梵高" },
+        { text: "咨询朋友，参考他人", artist: "毕加索" }
+    ]},
+    { text: "你心中理想的爱情是？", options: [
+        { text: "轰轰烈烈，灵魂伴侣", artist: "梵高" },
+        { text: "互相激发灵感，永远新鲜", artist: "毕加索" },
+        { text: "平淡如水，相伴一生", artist: "莫奈" },
+        { text: "智性恋，思想共鸣", artist: "达·芬奇" }
+    ]},
+    { text: "你更喜欢哪种天气？", options: [
+        { text: "阳光灿烂，色彩鲜明", artist: "毕加索" },
+        { text: "阴雨天，适合沉思", artist: "梵高" },
+        { text: "雾蒙蒙，朦胧美感", artist: "莫奈" },
+        { text: "星空璀璨，神秘莫测", artist: "达利" }
+    ]},
+    { text: "如果给你一间工作室，你会？", options: [
+        { text: "摆满实验仪器和草稿", artist: "达·芬奇" },
+        { text: "堆满颜料和未完成品", artist: "梵高" },
+        { text: "放置超现实装置", artist: "达利" },
+        { text: "挂满自己的风景画", artist: "莫奈" }
+    ]},
+    { text: "你更擅长哪种表达方式？", options: [
+        { text: "演说和辩论", artist: "毕加索" },
+        { text: "写作或诗歌", artist: "梵高" },
+        { text: "绘图或设计", artist: "达·芬奇" },
+        { text: "肢体或视觉艺术", artist: "达利" }
+    ]},
+    { text: "你如何看待死亡？", options: [
+        { text: "是另一种形式的生命", artist: "梵高" },
+        { text: "是最后的超现实作品", artist: "达利" },
+        { text: "留下不朽的作品即永生", artist: "米开朗基罗" },
+        { text: "自然循环的一部分", artist: "莫奈" }
+    ]},
+    { text: "你更偏爱哪种颜色？", options: [
+        { text: "明亮的黄色", artist: "梵高" },
+        { text: "深邃的蓝色", artist: "莫奈" },
+        { text: "黑白与几何感", artist: "毕加索" },
+        { text: "大地色与赭石", artist: "米开朗基罗" }
+    ]},
+    { text: "最后，你觉得自己更像？", options: [
+        { text: "一个发明家", artist: "达·芬奇" },
+        { text: "一个表演家", artist: "毕加索" },
+        { text: "一个梦想家", artist: "梵高" },
+        { text: "一个建造者", artist: "米开朗基罗" }
+    ]}
+];
+
+let currentIndex = 0;
+let scores = {};
+const dynamicContent = document.getElementById('dynamicContent');
+const progressFill = document.getElementById('progressFill');
+const currentQNumberSpan = document.getElementById('currentQNumber');
+const totalQSpan = document.getElementById('totalQ');
+
+function initScores() {
+    scores = {"达·芬奇":0,"毕加索":0,"梵高":0,"米开朗基罗":0,"莫奈":0,"达利":0};
+}
+
+function updateProgress() {
+    const total = questionsData.length;
+    const percent = (currentIndex / total) * 100;
+    progressFill.style.width = percent + '%';
+    const chineseNum = ['一','二','三','四','五','六','七','八','九','十','十一','十二','十三','十四','十五','十六','十七','十八','十九','二十','二十一','二十二','二十三','二十四','二十五'];
+    currentQNumberSpan.innerText = `第${chineseNum[currentIndex]}题`;
+}
+
+function getTopArtist() {
+    let max = -1;
+    let top = "";
+    for(let k in scores) if(scores[k]>max) {max=scores[k];top=k;}
+    return top;
+}
+
+function renderResult() {
+    const top = getTopArtist();
+    const info = ARTISTS[top];
+    dynamicContent.innerHTML = `
+        <div class="result-card">
+            <div class="artist-name">${info.name}</div>
+            <div class="artist-tagline">${info.tagline}</div>
+            <div class="artist-desc">${info.desc}</div>
+            <div class="share-buttons">
+                <button class="restart-test" onclick="restartTest()">重新测试</button>
+                <div class="copy-tip" onclick="copyResult()">复制结果分享</div>
+            </div>
+        </div>
+    `;
+    progressFill.style.width = "100%";
+    currentQNumberSpan.innerText = "完成";
+}
+
+function renderQuestion() {
+    if(currentIndex >= questionsData.length) {renderResult();return;}
+    const q = questionsData[currentIndex];
+    let opts = '';
+    const letters = ['A','B','C','D'];
+    q.options.forEach((o,i)=>{
+        opts+=`<div class="option-btn" onclick="select('${o.artist}')"><span class="option-prefix">${letters[i]}</span>${o.text}</div>`;
+    });
+    dynamicContent.innerHTML = `
+        <div class="quiz-card">
+            <div class="question-text">${q.text}</div>
+            <div class="options-grid">${opts}</div>
+            <div class="action-buttons"><button class="reset-btn" onclick="restartTest()">重新开始</button></div>
+        </div>
+    `;
+    updateProgress();
+}
+
+function select(artist) {
+    scores[artist]++;
+    currentIndex++;
+    renderQuestion();
+}
+
+function restartTest() {
+    initScores();
+    currentIndex = 0;
+    renderQuestion();
+}
+
+function copyResult() {
+    const top = getTopArtist();
+    const info = ARTISTS[top];
+    const text = `艺术人格测试：我是${info.name}，${info.tagline}！`;
+    navigator.clipboard.writeText(text).then(()=>alert("复制成功")).catch(()=>alert("复制失败"));
+}
+
+initScores();
+totalQSpan.innerText = "/ 二十五";
+renderQuestion();
+</script>
+</body>
+</html>
