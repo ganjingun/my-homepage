@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;奥林匹斯神格鉴定 · 十二主神试炼&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>/* 米白肌理纸背景 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #faf7f0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e0d8c8' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2e2e2e;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.greek-border {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #d6c8b5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 2rem 0.5rem 2rem 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 30px rgba(0,0,0,0.06), 0 0 0 1px rgba(180,160,130,0.3) inset;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255,255,255,0.75);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(16px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-backdrop-filter: blur(16px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2.8rem 2.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 750px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3a342c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px dashed #c4b394;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>word-break: break-word;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8b7e6c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* 密码区域 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.oracle-password {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255,255,255,0.6);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ddd2c0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.2rem 1.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 2.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 8px rgba(0,0,0,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.password-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.85rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #a09480;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.password-note {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #b3a58c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 0.3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.lock-screen {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* --- 重点：神域入口文字 --- */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.lock-icon {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #b5a58c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.input-group {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.gold-input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #cfc1ab;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Courier New', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2e2e2e;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: inset 0 1px 4px rgba(0,0,0,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.gold-input:focus {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #b0996b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 0 3px rgba(180,150,100,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f2ede4;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #c8b798;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3a342c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem 1.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 6px rgba(0,0,0,0.05);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: 0.1s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(to bottom, #f9f6f0, #efe7da);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn:active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e4d9c2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 1px 3px rgba(0,0,0,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.error-msg {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #b5553c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* 测试主界面 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.quiz-panel {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #9b8d78;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px dotted #d6c8b5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2e2e2e;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.options {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255,255,255,0.7);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #d6c8b5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3a342c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: 0.15s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(4px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 1px 4px rgba(0,0,0,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f3ede2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #b0986b;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.restart-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #d6c8b5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8b7e6c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* 结果界面 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.god-name {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #4d4134;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1rem 0 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.god-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8b7e6c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.god-desc {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255,255,255,0.6);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 2rem 0.5rem 2rem 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 4px solid #c4b394;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.7;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1.5rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #2e2e2e;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.analysis-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(250,247,240,0.8);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.8rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 1.5rem 0.5rem 1.5rem 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ddd2c0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.analysis-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8b7e6c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px dashed #c4b394;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 0.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.trait-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.trait-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #5a5246;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.trait-bar-bg {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e7dfd0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #cfc1ab;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.trait-bar-fill {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(90deg, #c8b38a, #aa8e64);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: width 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 6px rgba(170,140,90,0.4);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.trait-percent {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-width: 55px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #4d4134;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.extended-analysis {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255,255,255,0.7);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #e0d5c0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3a342c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.match-list {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 0.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.match-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255,255,255,0.6);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.5rem 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #e0d5c0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3a342c;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hidden {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none !important;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.footer-note {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #b3a58c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 480px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.greek-border {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 1.8rem 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 1.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>letter-spacing: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.question-text {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.god-name {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 2.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.trait-label {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>width: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.lock-icon {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>letter-spacing: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div class="greek-border"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;神谕试炼&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="subtitle"&gt;奥林匹斯十二主神 · 真容显现&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 密码锁界面 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="lockScreen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="lock-icon"&gt;神 域 入 口&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="oracle-password"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="password-label"&gt;神域口令&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="password-note"&gt;请向发布者索取本次口令&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="input-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="passwordInput" class="gold-input" placeholder="输入口令" autocomplete="off"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" id="unlockBtn"&gt;踏入神域&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="lockError" class="error-msg"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 测试主界面 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="quizScreen" class="quiz-panel hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="progress"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span id="questionCounter"&gt;第1问 / 共25问&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;神格共鸣&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="questionDisplay" class="question-text"&gt;加载神谕……&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="optionsContainer" class="options"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn restart-btn" id="restartQuizBtn"&gt;重铸神格 (重新测试)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 结果界面 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="resultScreen" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="result-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="font-size: 1.2rem; font-weight:300; color:#b5a58c; letter-spacing:3px;"&gt;神 格 显 现&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="godNameDisplay" class="god-name"&gt;宙斯&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="godTitleDisplay" class="god-title"&gt;众神之王&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="godDescDisplay" class="god-desc"&gt;天空与雷电的主宰。&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="analysis-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="analysis-title"&gt;神格特质分析&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="traitsContainer"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="extendedAnalysis" class="extended-analysis"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="matchListContainer" class="match-list"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" id="restartFromResultBtn"&gt;再度试炼&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn restart-btn" id="backToLockFromResult" style="margin-top: 1rem;"&gt;更换身份 / 锁定&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-note"&gt;© 奥林波斯 · 神格鉴定所&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>(function() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// ========== 固定密码 ( 修改这里即可 ) ==========</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const FIXED_PASSWORD = "Olympus2024";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// ========== 十二主神数据 ==========</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const GODS = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'zeus', name: '宙斯', title: '雷霆之主·众神之父', desc: '你拥有无可匹敌的权威与决断力，天生领袖。如同宙斯，你掌控全局，重视秩序与力量，偶尔也会为宏大愿景所吸引。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'hera', name: '赫拉', title: '天后·婚姻与家庭的守护者', desc: '你忠诚、高贵，珍视承诺与关系。你的骄傲不容侵犯，内心强大且爱憎分明，用坚毅捍卫所爱，拥有看穿虚伪的智慧。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'poseidon', name: '波塞冬', title: '海洋主宰·地震之神', desc: '你的情绪如海洋，时而平静包容，时而掀起巨浪。你热爱自由，性格坚韧，内心对在乎的人无比护短，拥有撼动世界的力量。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'demeter', name: '得墨忒耳', title: '丰饶女神·大地之母', desc: '你充满母性光辉，滋养他人，重视自然与循环。你坚韧且富有耐心，但如果珍视之物被夺走，你也会让世界陷入寒冬，爱深沉而持久。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'athena', name: '雅典娜', title: '智慧女神·战略与技艺', desc: '理性、冷静、足智多谋。你擅长谋略，热爱知识与公正，总能在危机中找到最优解，是众人依赖的智者，同时保持独立与优雅。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'apollo', name: '阿波罗', title: '光明之神·艺术与预言之神', desc: '你才华横溢，追求完美与和谐。热爱音乐、诗歌与真理，自带光芒，有时理性有时浪漫，是理想主义与美学的化身。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'artemis', name: '阿尔忒弥斯', title: '狩猎女神·荒野守护者', desc: '独立、果敢，热爱自由与自然。你保护弱小，厌恶束缚，内心有一片不容侵犯的森林。如同月之女神，你静谧却充满力量，忠于自己的原则。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'ares', name: '阿瑞斯', title: '战神·力量与勇气的化身', desc: '你热血、直接，充满行动力。不畏惧冲突，敢于为信念而战。虽然有时冲动，但你的真诚与勇气能感染众人，是永远的战士。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'aphrodite', name: '阿佛洛狄忒', title: '爱神·美与欲望的象征', desc: '你魅力四射，懂得欣赏美与爱。感性、浪漫，善于建立情感的联结，深知欲望的力量，并能让周围的一切变得更加迷人。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'hephaestus', name: '赫菲斯托斯', title: '火神·锻造与工匠之神', desc: '你专注、执着，拥有化腐朽为神奇的创造力。外表或许低调，但内心炉火纯青，以技艺与耐心征服世界，是可靠的造物主。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'hermes', name: '赫尔墨斯', title: '众神使者·商旅与狡黠之神', desc: '聪明机敏，口才出众，适应力极强。你热爱冒险与交流，总能在不同圈子游刃有余，带来意想不到的惊喜与好运。' },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ id: 'dionysus', name: '狄俄尼索斯', title: '酒神·狂欢与戏剧之神', desc: '热情奔放，享受生命中的狂喜与神秘。你富有感染力，能带给他人快乐，同时也懂得深层的灵性，是生活的艺术家。' }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// ========== 25道题目 ==========</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const QUESTIONS = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '在团队中，你通常扮演什么角色？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '发号施令的决策者', god: 'zeus' }, { text: '维护规则与和谐的守护者', god: 'hera' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '出谋划策的军师', god: 'athena' }, { text: '活跃气氛的开心果', god: 'dionysus' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '哪一样事物最能触动你的情绪？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '波澜壮阔的大海', god: 'poseidon' }, { text: '丰收的麦田与家园', god: 'demeter' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '动人的音乐与诗歌', god: 'apollo' }, { text: '刻骨铭心的爱情', god: 'aphrodite' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '面对不公正的对待，你会？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '直接对抗，用力量说话', god: 'ares' }, { text: '保持独立，坚守自己的阵地', god: 'artemis' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '运用智慧与规则反击', god: 'athena' }, { text: '沟通斡旋，化解矛盾', god: 'hermes' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你更向往哪种生活方式？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '自由徜徉于山野林间', god: 'artemis' }, { text: '身处繁华，掌控权柄', god: 'zeus' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '沉浸于手艺与创造', god: 'hephaestus' }, { text: '享受当下，派对与狂欢', god: 'dionysus' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你的朋友通常如何评价你？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '魅力四射，善于社交', god: 'aphrodite' }, { text: '口才好，机灵又风趣', god: 'hermes' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '有威严，值得信赖的领袖', god: 'zeus' }, { text: '可靠且温暖，像家人一样', god: 'demeter' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '当你压力很大时，你会？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '情绪起伏，需要宣泄', god: 'poseidon' }, { text: '投入工作或创造，转移注意', god: 'hephaestus' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '独自运动或远行，放空自己', god: 'artemis' }, { text: '用竞争或挑战来释放', god: 'ares' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你觉得自己最大的天赋是？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '逻辑分析与智慧', god: 'athena' }, { text: '艺术感知与审美', god: 'apollo' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '与人联结与共情', god: 'hera' }, { text: '带动气氛与直觉', god: 'dionysus' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '哪种颜色最吸引你？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '金色 / 雷霆黄', god: 'zeus' }, { text: '海蓝色', god: 'poseidon' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '橄榄绿 / 大地色', god: 'demeter' }, { text: '月银色', god: 'artemis' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你更欣赏哪种品质？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '勇敢无畏', god: 'ares' }, { text: '智慧谋略', god: 'athena' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '忠诚坚贞', god: 'hera' }, { text: '创造力与技艺', god: 'hephaestus' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '如果选择一项神力，你会要？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '操控天气与雷电', god: 'zeus' }, { text: '预知未来', god: 'apollo' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '变形与狡黠', god: 'hermes' }, { text: '令万物生长', god: 'demeter' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你对爱情的态度更接近？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '激情而浪漫，追求心动', god: 'aphrodite' }, { text: '忠诚且专一，守护家庭', god: 'hera' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '独立自由，不喜束缚', god: 'artemis' }, { text: '热烈但有时冲动', god: 'ares' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你容易被哪种艺术形式打动？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '宏伟的史诗与雕塑', god: 'zeus' }, { text: '抒情诗与音乐', god: 'apollo' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '悲剧与戏剧', god: 'dionysus' }, { text: '精致的工艺品', god: 'hephaestus' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你习惯怎样解决难题？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '制定详细计划，逐步攻克', god: 'athena' }, { text: '依靠直觉与灵感', god: 'dionysus' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '寻求合作，借助他人之力', god: 'hermes' }, { text: '硬碰硬，坚持到底', god: 'ares' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '哪种自然环境让你最舒适？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '高耸的山巅', god: 'zeus' }, { text: '深邃的海洋', god: 'poseidon' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '茂密的森林', god: 'artemis' }, { text: '肥沃的田野', god: 'demeter' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你更倾向于相信？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '命运与神谕', god: 'apollo' }, { text: '自己的力量与判断', god: 'athena' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '人与人之间的羁绊', god: 'hera' }, { text: '当下的快乐', god: 'dionysus' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你希望自己留给后人的印象是？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '威严的统治者', god: 'zeus' }, { text: '智慧的导师', god: 'athena' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '传奇的英雄', god: 'ares' }, { text: '美的化身', god: 'aphrodite' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '当你遇到竞争对手时？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '正面交锋，分出高下', god: 'ares' }, { text: '暗中观察，智取为上', god: 'hermes' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '保持风度，不屑争斗', god: 'artemis' }, { text: '尝试化敌为友', god: 'aphrodite' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你对待金钱与财富的态度？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '权力与地位的象征', god: 'zeus' }, { text: '享受生活与美的工具', god: 'aphrodite' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '创造更多价值的资源', god: 'hephaestus' }, { text: '够用即可，更重精神', god: 'apollo' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '哪种社交场合让你最自在？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '盛大的宴会', god: 'dionysus' }, { text: '小范围的知己交谈', god: 'hera' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '充满智识的研讨会', god: 'athena' }, { text: '自由随性的户外聚会', god: 'artemis' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你最大的弱点可能是？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '偶尔的傲慢', god: 'zeus' }, { text: '情绪波动', god: 'poseidon' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '过度保护', god: 'demeter' }, { text: '容易沉迷', god: 'dionysus' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你理想中的一天是如何开始？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '在阳光与鸟鸣中醒来', god: 'apollo' }, { text: '在爱人的怀抱中苏醒', god: 'aphrodite' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '立刻投入热爱的工作', god: 'hephaestus' }, { text: '踏上新的冒险旅途', god: 'hermes' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你对“规则”的看法？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '规则是秩序之本，必须遵守', god: 'zeus' }, { text: '规则应服务于公正', god: 'athena' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '必要时可以打破规则', god: 'hermes' }, { text: '我按自己的原则行事', god: 'artemis' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '你更重视哪种人际关系？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '伴侣与家庭', god: 'hera' }, { text: '朋友与社群', god: 'dionysus' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '师徒与传承', god: 'athena' }, { text: '兄弟姐妹般的羁绊', god: 'artemis' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '面对失败，你通常会？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '愤怒但迅速重振', god: 'ares' }, { text: '反思并吸取教训', god: 'athena' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '寻求他人安慰', god: 'demeter' }, { text: '用新的快乐冲淡它', god: 'dionysus' }] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: '如果可以选择一个神职，你会选？', options: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '天空与王权', god: 'zeus' }, { text: '海洋与地震', god: 'poseidon' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ text: '智慧与战争策略', god: 'athena' }, { text: '美丽与爱情', god: 'aphrodite' }] }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const TRAITS = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ name: '权威领导', gods: ['zeus'] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ name: '智慧谋略', gods: ['athena', 'apollo'] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ name: '勇气力量', gods: ['ares', 'poseidon'] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ name: '情感艺术', gods: ['aphrodite', 'dionysus', 'apollo'] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ name: '独立自由', gods: ['artemis', 'hermes'] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ name: '守护滋养', gods: ['demeter', 'hera'] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ name: '创造技艺', gods: ['hephaestus', 'athena'] }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let scores = {};</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let currentQ = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let unlocked = false;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const lockScreen = document.getElementById('lockScreen');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const quizScreen = document.getElementById('quizScreen');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const resultScreen = document.getElementById('resultScreen');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const pwInput = document.getElementById('passwordInput');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const unlockBtn = document.getElementById('unlockBtn');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const lockError = document.getElementById('lockError');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const questionDisplay = document.getElementById('questionDisplay');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const optionsDiv = document.getElementById('optionsContainer');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const questionCounter = document.getElementById('questionCounter');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const restartQuizBtn = document.getElementById('restartQuizBtn');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const restartFromResultBtn = document.getElementById('restartFromResultBtn');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const backToLock = document.getElementById('backToLockFromResult');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const godNameDisp = document.getElementById('godNameDisplay');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const godTitleDisp = document.getElementById('godTitleDisplay');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const godDescDisp = document.getElementById('godDescDisplay');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const traitsContainer = document.getElementById('traitsContainer');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const extendedAnalysisDiv = document.getElementById('extendedAnalysis');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const matchListContainer = document.getElementById('matchListContainer');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetScores() { GODS.forEach(g =&gt; scores[g.id] = 0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function startQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resetScores(); currentQ = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>lockScreen.classList.add('hidden'); resultScreen.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>quizScreen.classList.remove('hidden'); renderQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (currentQ &lt; QUESTIONS.length) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const q = QUESTIONS[currentQ];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>questionDisplay.textContent = q.text;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>questionCounter.textContent = `第${currentQ+1}问 / 共${QUESTIONS.length}问`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optionsDiv.innerHTML = q.options.map(o =&gt; `&lt;button class="option-btn" data-god="${o.god}"&gt;${o.text}&lt;/button&gt;`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.querySelectorAll('.option-btn').forEach(b =&gt; b.addEventListener('click', onSelect));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else finishQuiz();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function onSelect(e) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const g = e.currentTarget.dataset.god;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (scores[g] !== undefined) scores[g]++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>currentQ++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function generateExtendedText(traitScores) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sorted = [...traitScores].sort((a,b) =&gt; b.raw - a.raw);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const top1 = sorted[0];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const top2 = sorted[1];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let text = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (top1.name === '权威领导') text += '你拥有与生俱来的领袖气质，擅长发号施令，在群体中自然成为核心。你相信秩序与力量，但要注意倾听他人的声音。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (top1.name === '智慧谋略') text += '理性是你的底色，你习惯用头脑解决问题，善于规划与谋略。无论是学习还是工作，你总能抓住关键，冷静判断。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (top1.name === '勇气力量') text += '你的内心燃烧着不灭的斗志，面对挑战从不退缩。你相信行动胜于言语，勇敢是你的标签，但有时也需学会迂回。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (top1.name === '情感艺术') text += '你对美与情感有着极高的敏锐度，容易被艺术、音乐或动人故事打动。你以情感作为与世界连接的桥梁，充满感染力。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (top1.name === '独立自由') text += '你珍视个人空间与自由，讨厌被条条框框束缚。你喜欢按照自己的步调生活，独自探索世界，是真正的自由灵魂。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (top1.name === '守护滋养') text += '你天生一副温暖的心肠，总是愿意照顾身边的人。像大地一样，你给予他人安全感与支持，是可靠的港湾。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (top1.name === '创造技艺') text += '你有一双巧手与一颗专注的心，无论是技术还是艺术，你都能沉浸其中，创造出令人赞叹的成果。工匠精神在你身上闪光。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (top2 &amp;&amp; top2.name !== top1.name) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text += ' 同时，';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (top2.name === '智慧谋略') text += '你那颗缜密分析的心让你在复杂局势中游刃有余。';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else if (top2.name === '勇气力量') text += '你内心的无畏让你勇于尝试，不惧失败。';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else if (top2.name === '情感艺术') text += '你丰富的感受力让你的生活充满色彩与温度。';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else if (top2.name === '独立自由') text += '你骨子里的独立精神让你始终保持自我。';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else if (top2.name === '守护滋养') text += '你温柔的关怀让你身边的人感到无比安心。';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else if (top2.name === '创造技艺') text += '你那双善于创造的手为你赢得了许多惊叹。';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else if (top2.name === '权威领导') text += '你潜在的领导力在关键时刻往往能引领他人。';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return text;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderMatchList(scoresObj) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const pairs = GODS.map(g =&gt; ({ name: g.name, score: scoresObj[g.id] || 0 }));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pairs.sort((a,b) =&gt; b.score - a.score);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const total = Object.values(scoresObj).reduce((s,v)=&gt;s+v, 0) || 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let html = '&lt;div style="font-weight:500; margin-bottom:0.8rem; color:#4d4134;"&gt;神格契合度排行&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pairs.slice(0,3).forEach(p =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const pct = Math.round(p.score/total*100);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>html += `&lt;div class="match-item"&gt;&lt;span&gt;${p.name}&lt;/span&gt;&lt;span&gt;${pct}%&lt;/span&gt;&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>matchListContainer.innerHTML = html;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function finishQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let best = 'zeus', max = -1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let g of GODS) if (scores[g.id] &gt; max) { max = scores[g.id]; best = g.id; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const god = GODS.find(g =&gt; g.id === best) || GODS[0];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>godNameDisp.textContent = god.name;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>godTitleDisp.textContent = god.title;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>godDescDisp.textContent = god.desc;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const traitScores = TRAITS.map(t =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let raw = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>t.gods.forEach(id =&gt; raw += scores[id] || 0);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return { ...t, raw };</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const totalRaw = traitScores.reduce((a,b) =&gt; a + b.raw, 0) || 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let traitsHtml = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>traitScores.forEach(t =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const pct = Math.round(t.raw / totalRaw * 100);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>traitsHtml += `&lt;div class="trait-item"&gt;&lt;span class="trait-label"&gt;${t.name}&lt;/span&gt;&lt;div class="trait-bar-bg"&gt;&lt;div class="trait-bar-fill" style="width:${pct}%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="trait-percent"&gt;${pct}%&lt;/span&gt;&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>traitsContainer.innerHTML = traitsHtml;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>extendedAnalysisDiv.innerHTML = `&lt;p style="margin-bottom:0.5rem;"&gt;天命评语&lt;/p&gt;&lt;p&gt;${generateExtendedText(traitScores)}&lt;/p&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderMatchList(scores);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>quizScreen.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resultScreen.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetLock() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pwInput.value = ''; lockError.textContent = ''; unlocked = false;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>quizScreen.classList.add('hidden'); resultScreen.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>lockScreen.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>unlockBtn.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (pwInput.value.trim() === FIXED_PASSWORD) { unlocked = true; lockError.textContent = ''; startQuiz(); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else { lockError.textContent = '口令错误，无法进入神域'; pwInput.value = ''; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>pwInput.addEventListener('keypress', e =&gt; { if (e.key === 'Enter') unlockBtn.click(); });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>restartQuizBtn.addEventListener('click', () =&gt; { if (unlocked) startQuiz(); else resetLock(); });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>restartFromResultBtn.addEventListener('click', () =&gt; { if (unlocked) startQuiz(); else resetLock(); });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>backToLock.addEventListener('click', resetLock);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('contextmenu', e =&gt; e.preventDefault());</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resetLock();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>})();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
